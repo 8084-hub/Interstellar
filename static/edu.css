@@ -160,6 +160,16 @@ button:hover:not(:disabled) {
   font-size: 0.85rem;
 }
 
+.target-display a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.target-display a:hover,
+.target-display a:focus {
+  text-decoration: underline;
+}
+
 .frame-shell {
   position: relative;
   border-radius: 16px;

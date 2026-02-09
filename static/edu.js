@@ -4,7 +4,7 @@ const statusText = document.querySelector("#status-text");
 const statusBox = document.querySelector(".status");
 const iframe = document.querySelector("#preview-frame");
 const overlay = document.querySelector("#frame-overlay");
-const targetDisplay = document.querySelector("#target-display");
+const targetLink = document.querySelector("#target-link");
 const button = document.querySelector("#go-button");
 
 const setStatus = (message, isError = false) => {
@@ -30,7 +30,8 @@ form.addEventListener("submit", async event => {
 
   setLoading(true);
   setStatus("Fetching page via the server-side proxy...");
-  targetDisplay.textContent = raw;
+  targetLink.textContent = raw;
+  targetLink.href = raw;
   iframe.srcdoc = "";
 
   try {
